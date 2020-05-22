@@ -16,11 +16,11 @@
   "author": "Yeasir Hugais",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "*",
-    "nodemon": "*"
+    "concurrently": "5.2.0",
+    "nodemon": "2.0.4"
   },
   "dependencies": {
-    "express": "*",
-    "if-env": "*"
+    "express": "4.17.1",
+    "if-env": "1.0.4"
   }
 }
