@@ -7,10 +7,10 @@ const Header = () =>{
     return(
         <>  
             <nav className="nav navbar navbar-light bg-light navbar-expand justify-content-between mx-md-2">
-                <a className="navbar-brand d-flex align-items-center"><FcLibrary className="logo-icon mr-1"/>My Virtual Library</a>
+                <a href="/" className="navbar-brand d-flex align-items-center"><FcLibrary className="logo-icon mr-1"/>My Virtual Library</a>
                 <div className="navbar-nav">
-                        <a className="nav-item nav-link active" href="#">Search</a>
-                        <a className=" nav-item nav-link" href="#">Saved</a>
+                        <a className="nav-item nav-link active" href="/">Search</a>
+                        <a className=" nav-item nav-link" href="/hi">Saved</a>
                 </div>
             </nav>
         </>

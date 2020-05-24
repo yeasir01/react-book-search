@@ -21,11 +21,11 @@ const ResultsData = () =>{
                             </p>
                             <div className="row">
                                 <div className="col-md-12 col-lg-6">
-                                    <p className="card-text"><small class="text-muted">Book by Marijn Haverbeke</small></p>
+                                    <p className="card-text"><small className="text-muted">Book by Marijn Haverbeke</small></p>
                                 </div>
                                 <div className="col-md-12 col-lg-6 text-right">
-                                    <button type="button" class="btn btn-outline-secondary btn-sm mx-2 px-4 rounded-pill">More Info</button>
-                                    <button type="button" class="btn btn-info btn-sm mx-2  px-4 rounded-pill">Save</button>
+                                    <button type="button" className="btn btn-outline-secondary btn-sm mx-2 px-4 rounded-pill">More Info</button>
+                                    <button type="button" className="btn btn-info btn-sm mx-2  px-4 rounded-pill">Save</button>
                                 </div>
                             </div>
                         </div>
@@ -49,11 +49,11 @@ const ResultsData = () =>{
                             </p>
                             <div className="row">
                                 <div className="col-md-12 col-lg-6">
-                                    <p className="card-text"><small class="text-muted">Book by Marijn Haverbeke</small></p>
+                                    <p className="card-text"><small className="text-muted">Book by Marijn Haverbeke</small></p>
                                 </div>
                                 <div className="col-md-12 col-lg-6 text-right">
-                                    <button type="button" class="btn btn-outline-secondary btn-sm mx-2 px-4 rounded-pill">More Info</button>
-                                    <button type="button" class="btn btn-info btn-sm mx-2  px-4 rounded-pill">Save</button>
+                                    <button type="button" className="btn btn-outline-secondary btn-sm mx-2 px-4 rounded-pill">More Info</button>
+                                    <button type="button" className="btn btn-info btn-sm mx-2  px-4 rounded-pill">Save</button>
                                 </div>
                             </div>
                         </div>
