@@ -1,13 +1,17 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaSearch } from 'react-icons/fa';
+import './style.css';
 
-const Search = () =>{
+const Search = (props) =>{
     return(
         <>
-            <form>
-                <div className="form-group">
-                    <input id="bookSearch" type="text" className="form-control rounded-pill px-3" placeholder="Search by booktitle..." />
-                    <label htmlFor="bookSearch" className="mt-1">Powered by Google Books API</label>
+            <form onSubmit={props.handle} className="form-group main-search w-50 px-4">
+                <div className="form-group has-search">
+                    <span className="form-control-feedback"><FaSearch/></span>
+                    <input type="text" className="form-control form-input" placeholder="Search" />
                 </div>
+                <p className="text-white search-label">powered by Google</p>
             </form>
         </>
     )

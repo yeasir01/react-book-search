@@ -1,0 +1,14 @@
+.mag-icon{
+    font-size: 5rem;
+    opacity: .2;
+}
+
+.mag-text{
+    font-size: 2rem;
+    opacity: .2;
+}
+
+.search-label{
+    text-align: right;
+    margin: -10px 10px 0 0;
+}
