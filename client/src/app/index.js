@@ -26,7 +26,7 @@ function App() {
     .finally(() =>{
       setLoading(false)
     })
-  }, [loading, search]);
+  }, [search, loading]);
 
   const handleSubmit = (event) => {
     event.preventDefault()
