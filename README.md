@@ -1,29 +1,34 @@
-# Create React Express App
 
-## About This Boilerplate
+# React Book Search - Powered by Google API
+A web app used to search for books using the Google API & save them to a mongoose database. The app uses the MVC paradigm. The app was designed to makes API call from the server to protect the api key & return data to the client.
+## Table of contents
+* [Installation](#Installation)
+* [Technologies](#Technologies)
+* [Testing](#Testing)
+* [Demo](#Demo)
+* [License](#License)
+## Installation
+Install NodeJS & Use npm i, then npm start.
+or Run from browser by clicking link below.
+## Technologies
+* React/JSX
+* React Router DOM
+* Javascript
+* CSS
+* Bootstrap
+* Animate.css
+* React-toastify
+* Express
+* Axios
+* dotenv
+* mongoose
+* mongo DB
+## Testing
+* Tested on chrome browser
+## Demo
+[https://google-reactstack.herokuapp.com/](https://google-reactstack.herokuapp.com/)
+## License
+This project is licensed under [MIT License](https://choosealicense.com/licenses/).
+***
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-## Starting the app locally
-
-Start by installing front and backend dependencies. While in this directory, run the following command:
-
-```
-npm install
-```
-
-This should install node modules within the server and the client folder.
-
-After both installations complete, run the following command in your terminal:
-
-```
-npm start
-```
-
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
-
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+_This file was generated using a [Readme Generator](https://github.com/yeasir01/readme-generator) developed by Yeasir H._
