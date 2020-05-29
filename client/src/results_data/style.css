@@ -3,3 +3,8 @@
       margin-bottom: 1rem;
     }
 }
+
+.save-btn:active, .save-btn:focus {
+  border: none !important;
+  box-shadow: none;
+}

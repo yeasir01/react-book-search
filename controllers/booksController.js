@@ -11,7 +11,6 @@ module.exports = {
         .catch(err => res.json(err))
     },
     saveBook: function(req, res){
-        console.log(req.body)
         db.create(req.body)
         .then(response => res.json(response))
         .catch(err => res.status(422).json(err));
@@ -21,5 +20,11 @@ module.exports = {
           .then(record => record.remove())
           .then(response => res.json(response))
           .catch(err => res.status(422).json(err));
+    },
+    getAllSaved: function(req, res){
+        db.find()
+        .sort({title: 1})
+        .then(data => res.json(data))
+        .catch(err => res.json(err))
     }
 }

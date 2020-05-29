@@ -14,4 +14,7 @@ router.route("/books/api")
 router.route("/books/api/:id")
     .delete(controller.removeBook)
 
+router.route("/books/api/saved")
+    .get(controller.getAllSaved)
+
 module.exports = router;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import { toast } from 'react-toastify';
 import fallBack from './bookimgfallback.png';
 import { RiHeartAddLine } from 'react-icons/ri';
 import API from '../utils/api'
@@ -17,8 +18,12 @@ const ResultData = ({ data }) => {
         }
         
         API.saveBook(bookInfo)
-        .then((res)=> console.log(res))
-        .catch((err)=> console.log(err))
+        .then((res)=> {
+            toast.success("Book Saved!")
+        })
+        .catch((err)=> {
+            toast.error(`Opps! ${err}`, {autoClose: 5000})
+        })
     }
     
     return (
@@ -44,7 +49,7 @@ const ResultData = ({ data }) => {
                                                             <a href={book.volumeInfo.infoLink ? book.volumeInfo.infoLink : "#"} target="_blank" rel="noopener noreferrer">
                                                             {book.volumeInfo.title}</a>
                                                         </h5>
-                                                        <button className="btn btn-link" onClick={()=>handleSave(book)}><RiHeartAddLine /></button>
+                                                        <button className="btn btn-link save-btn" onClick={()=>handleSave(book)}><RiHeartAddLine /></button>
                                                     </div>
                                                 </div>
                                             </div>

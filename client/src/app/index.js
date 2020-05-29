@@ -1,46 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { ToastContainer } from 'react-toastify';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from '../header';
-import Hero from '../hero';
-import Results from '../results';
-import './global.css'
-import API from '../utils/api'
+import SearchPage from '../pages/search';
+import SavedPage from '../pages/saved';
 
 function App() {
-  
-  const [booksData, setBooksData] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [errorData, setErrorData] = useState('');
-  const [errorState, setErrorState] = useState(false);
-  const [search, setSearch] = useState('');
-
-  useEffect(() => {
-    API.bookSearch(search)
-    .then(res => {
-      setBooksData(res.data.items)
-      setErrorState(false)
-    })
-    .catch(err =>{
-      setErrorData(err)
-      setErrorState(true)
-    })
-    .finally(() =>{
-      setLoading(false)
-    })
-  }, [search, loading]);
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    let query = event.target[0].value;
-    setSearch(query)
-    setLoading(true)
-  };
 
   return (
-    <div>
+    <Router>
       <Header />
-      <Hero handle={handleSubmit}/>
-      <Results data={booksData} load={loading} errorData={errorData} errorState={errorState}/>
-    </div>
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={false}
+      />
+      
+      <Switch>
+        <Route path="/" exact component={SearchPage} />
+        <Route path="/saved" component={SavedPage} />
+      </Switch>
+    </Router>
   );
 }
 
